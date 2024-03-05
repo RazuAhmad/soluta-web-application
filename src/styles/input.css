@@ -1,0 +1,181 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary: #6e89fc;
+  /* --primary: #6e88fcd9; */
+  --secondary: #ff826e;
+
+  --support-blue: #3096e1;
+  --support-blue-deep: #2761bf;
+  --support-green: #53d2db;
+  --error: #eb5757;
+
+  --dark-1: #eb5757;
+  --dark-2: #122454;
+  --dark-3: #213452;
+
+  --grey-1: #b7b7b7;
+  --grey-2: #555d6c;
+  --grey-3: #7e8f9a;
+}
+
+/**************************** Global **************************/
+a {
+  @apply cursor-pointer;
+}
+
+.nav-item {
+  @apply text-[16px] font-medium text-[#464646] hover:text-primary font-poppins  py-3 md:py-4;
+}
+
+.btn {
+  @apply flex justify-center items-center font-medium rounded-[100px] text-sm text-white bg-primary hover:bg-[#6e88fcd9] hover:shadow-lg;
+}
+
+.btn-outline {
+  @apply flex justify-center items-center font-medium rounded-[100px]  border-[1px] border-primary text-sm text-primary hover:text-white bg-white hover:bg-[#6e88fcd9] hover:shadow-lg;
+}
+
+.custom-scrollbar {
+  @apply scrollbar-thin scrollbar-thumb-primary scrollbar-track-[#F0F0F0] scrollbar-thumb-rounded-full scrollbar-track-rounded-md;
+}
+.section-brief-title {
+  @apply text-primary  font-medium text-[16px] mb-5;
+}
+
+.section-title {
+  @apply text-dark-3  font-semibold text-[40px] mb-5 leading-[48px];
+}
+
+.section-description {
+  @apply text-grey-2;
+}
+
+.dot {
+  @apply h-[10px] w-[10px] bg-[#D9D9D9] rounded-full cursor-pointer hover:bg-primary hover:scale-150 delay-75;
+}
+
+.footer-link {
+  @apply text-[#5B6F7B] hover:text-primary cursor-pointer;
+}
+
+.swiper {
+  @apply w-full h-full;
+}
+
+/* .swiper-slide {
+  @apply w-full
+} */
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge, and Firefox */
+.no-scrollbar {
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
+}
+
+.bg-blur {
+  backdrop-filter: blur(10px);
+}
+
+/**************************** Landing Page **************************/
+
+.service-card {
+  @apply w-full md:w-[356px] h-[272px] rounded-[10px] pt-[26px] pr-[29px] pb-[56px] pl-[27px] border-[1px] border-[#E8E8E8] shadow-md hover:border-primary;
+}
+
+.whysoluta-tab-btn {
+  @apply hs-tab-active:border-primary hs-tab-active:text-primary hover:text-primary h-full flex flex-col items-center justify-between text-grey-2;
+}
+
+.whysoluta-tab-svg {
+  @apply fill-grey-2 hs-tab-active:fill-primary !h-[30px];
+}
+
+.whysoluta-tab-border-b {
+  @apply h-2 w-full hs-tab-active:bg-primary rounded-t mt-2;
+}
+
+.menuUi-tab-btn {
+  @apply text-white hs-tab-active:text-primary hs-tab-active:bg-white rounded-[100px] h-[71px] flex justify-center items-center min-w-[172px] cursor-pointer;
+}
+
+.menuui-tab-panel {
+  @apply max-w-[894px] mx-auto;
+}
+
+.biz-category-tab-btn {
+  @apply flex items-center gap-x-[27px] py-[21px] pl-[10px] pr-8;
+}
+
+.biz-category-tab-title {
+  @apply text-grey-3 font-bold text-[24px] mb-[9px] text-start;
+}
+
+.biz-category-tab-description {
+  @apply text-grey-3 text-start;
+}
+
+/* .biz-category-tab-panel{
+  @apply 
+} */
+
+.orange-dot {
+  @apply bg-[#FF826E] !min-w-[12px] !h-3 rounded-full;
+}
+
+.key-points {
+  box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.08);
+  backdrop-filter: blur(10px);
+}
+
+.horizontal-card {
+  @apply rounded-[20px] p-[58px] flex justify-between gap-[62px];
+}
+
+.horizontal-card-title {
+  @apply text-white text-[40px] mb-5;
+}
+.horizontal-card-description {
+  @apply text-white text-[16px] mb-10;
+}
+.learn-more-btn {
+  @apply flex items-center gap-2 text-white;
+}
+
+.vertical-card {
+  @apply bg-white shadow-md rounded-[20px] flex flex-col  gap-[17px] max-w-[552px];
+}
+.vertical-card h2 {
+  @apply text-dark-3 text-[30px] mb-5;
+}
+.rounded-icon-wrapper {
+  @apply rounded-[20px] p-[15px] max-w-[78px];
+}
+
+/**************************** All features Page **************************/
+
+.feature-card {
+  @apply w-[168px] h-[158px] rounded-[10px] py-[19px] flex flex-col gap-[14px] items-center border-[1px] border-[#E8E8E8] shadow-sm hover:border-primary;
+}
+.feature-card-text {
+  @apply text-grey-2 group-hover:text-primary text-center;
+}
+
+.admin-facilities {
+  background: linear-gradient(
+    180deg,
+    rgba(52, 129, 255, 0.1) 0%,
+    rgba(52, 129, 255, 0) 100%
+  );
+  backdrop-filter: blur(5px);
+  border-radius: 30px;
+}

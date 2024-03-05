@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Carousel Slider with Tailwind CSS</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="bg-gray-100">
+    <div class="carousel overflow-hidden">
+      <div class="slides flex transition-transform duration-500 ease-in-out">
+        <!-- Your slides go here -->
+        <div class="slide min-w-full box-border">
+          <div
+            class="bg-blue-900 py-10 pl-10 pr-40 mb-8 rounded-2xl max-w-[744px]"
+          >
+            <img class="mb-6" src="../../../assets/icons/quotation.svg" />
+            <p class="text-white text-lg mb-8">
+              1sttttttttttt<br />
+              inventory, enhance sales, and build customer loyalty effortlessly.
+              Elevate<br />
+              your retail business with simplicity and efficiency.
+            </p>
+            <div class="flex items-center space-x-4">
+              <img
+                class="w-10 h-10"
+                src="../../../assets/boy-avatar.png"
+                alt="boy avatar"
+              />
+              <div class="text-white">
+                <p class="font-semibold">User Name</p>
+                <p>LightCastle Partners | Director</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="slide min-w-full box-border">
+          <div
+            class="bg-red-900 py-10 pl-10 pr-40 mb-8 rounded-2xl max-w-[744px]"
+          >
+            <img class="mb-6" src="../../../assets/icons/quotation.svg" />
+            <p class="text-white text-lg mb-8">
+              2nddddddddd<br />
+              inventory, enhance sales, and build customer loyalty effortlessly.
+              Elevate<br />
+              your retail business with simplicity and efficiency.
+            </p>
+            <div class="flex items-center space-x-4">
+              <img
+                class="w-10 h-10"
+                src="../../../assets/boy-avatar.png"
+                alt="boy avatar"
+              />
+              <div class="text-white">
+                <p class="font-semibold">User Name</p>
+                <p>LightCastle Partners | Director</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="slide min-w-full box-border">
+          <div
+            class="bg-red-900 py-10 pl-10 pr-40 mb-8 rounded-2xl max-w-[744px]"
+          >
+            <img class="mb-6" src="../../../assets/icons/quotation.svg" />
+            <p class="text-white text-lg mb-8">
+              2nddddddddd<br />
+              inventory, enhance sales, and build customer loyalty effortlessly.
+              Elevate<br />
+              your retail business with simplicity and efficiency.
+            </p>
+            <div class="flex items-center space-x-4">
+              <img
+                class="w-10 h-10"
+                src="../../../assets/boy-avatar.png"
+                alt="boy avatar"
+              />
+              <div class="text-white">
+                <p class="font-semibold">User Name</p>
+                <p>LightCastle Partners | Director</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Add more slides as needed -->
+      </div>
+
+      <div class="dots flex justify-center mt-2">
+      </div>
+    </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const slidesContainer = document.querySelector(".slides");
+        const dotsContainer = document.querySelector(".dots");
+
+        // Create dots dynamically based on the number of slides
+        const slides = document.querySelectorAll(".slide");
+        slides.forEach((_, index) => {
+          const dot = document.createElement("div");
+          dot.classList.add(
+            "w-4",
+            "h-4",
+            "bg-gray-400",
+            "rounded-full",
+            "mx-2",
+            "cursor-pointer",
+            "hover:bg-blue-500",
+            "transition",
+            "duration-300"
+          );
+          dotsContainer.appendChild(dot);
+
+          dot.addEventListener("click", () => {
+            goToSlide(index);
+          });
+        });
+
+        // Initial state
+        let currentSlide = 0;
+
+        function goToSlide(index) {
+        currentSlide = index;
+        const transformValue = `translate-x(${-index * 100}%)`;
+        slidesContainer.style.transform = transformValue;
+
+        // Update active dot
+        const dots = document.querySelectorAll(".dots > div");
+        dots.forEach((dot, i) => {
+            dot.classList.toggle("bg-blue-500", i === index);
+        });
+        }
+
+
+        // Auto-advance the slides (you can customize this behavior)
+        setInterval(() => {
+          currentSlide = (currentSlide + 1) % slides.length;
+          goToSlide(currentSlide);
+        }, 5000); // Change the interval as needed
+      });
+    </script>
+  </body>
+</html>
