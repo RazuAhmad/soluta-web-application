@@ -195,3 +195,20 @@ a {
 .support-card-description {
   @apply text-grey-2 font-normal text-base leading-6;
 }
+
+/* Pricing  css */
+
+.double-btn {
+  position: relative;
+}
+
+.double-btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 115px;
+  height: 44px;
+  background-color: #6e89fc;
+  background-repeat: no-repeat;
+}
