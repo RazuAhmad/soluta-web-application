@@ -179,3 +179,19 @@ a {
   backdrop-filter: blur(5px);
   border-radius: 30px;
 }
+
+.support-card {
+  @apply px-[23.5px] py-[25px] flex flex-col items-start max-w-[360px] rounded-[10px];
+}
+
+.support-card:hover {
+  border: 1px solid #6e89fc;
+}
+
+.support-card h2 {
+  @apply text-dark-3 font-semibold text-xl leading-6 mb-6;
+}
+
+.support-card-description {
+  @apply text-grey-2 font-normal text-base leading-6;
+}

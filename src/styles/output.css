@@ -691,6 +691,10 @@ video {
   margin-bottom: 3.5rem;
 }
 
+.mb-16 {
+  margin-bottom: 4rem;
+}
+
 .mb-2 {
   margin-bottom: 0.5rem;
 }
@@ -717,6 +721,10 @@ video {
 
 .mb-\[100px\] {
   margin-bottom: 100px;
+}
+
+.mb-\[117px\] {
+  margin-bottom: 117px;
 }
 
 .mb-\[120px\] {
@@ -1421,6 +1429,10 @@ video {
   gap: 95px;
 }
 
+.gap-5 {
+  gap: 1.25rem;
+}
+
 .gap-x-2 {
   -moz-column-gap: 0.5rem;
        column-gap: 0.5rem;
@@ -1651,6 +1663,11 @@ video {
   background-color: rgb(197 214 255 / var(--tw-bg-opacity));
 }
 
+.bg-\[\#D7D1FF\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(215 209 255 / var(--tw-bg-opacity));
+}
+
 .bg-\[\#D7E2FF\] {
   --tw-bg-opacity: 1;
   background-color: rgb(215 226 255 / var(--tw-bg-opacity));
@@ -1771,6 +1788,21 @@ video {
 .bg-white {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+
+.bg-\[\#FFCDD0\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 205 208 / var(--tw-bg-opacity));
+}
+
+.bg-\[\#C3F9FF\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(195 249 255 / var(--tw-bg-opacity));
+}
+
+.bg-\[\#C3DAFF\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(195 218 255 / var(--tw-bg-opacity));
 }
 
 .bg-opacity-25 {
@@ -2154,6 +2186,11 @@ video {
 .text-\[\#262626\] {
   --tw-text-opacity: 1;
   color: rgb(38 38 38 / var(--tw-text-opacity));
+}
+
+.text-\[\#2F74E6\] {
+  --tw-text-opacity: 1;
+  color: rgb(47 116 230 / var(--tw-text-opacity));
 }
 
 .text-\[\#464646\] {
@@ -2790,21 +2827,35 @@ a {
   border-radius: 30px;
 }
 
-.marker\:w-2 *::marker {
-  width: 0.5rem;
+.support-card {
+  display: flex;
+  max-width: 360px;
+  flex-direction: column;
+  align-items: flex-start;
+  border-radius: 10px;
+  padding-left: 23.5px;
+  padding-right: 23.5px;
+  padding-top: 25px;
+  padding-bottom: 25px;
 }
 
-.marker\:w-4 *::marker {
-  width: 1rem;
+.support-card:hover {
+  border: 1px solid #6e89fc;
 }
 
-.marker\:w-6 *::marker {
-  width: 1.5rem;
+.support-card h2 {
+  margin-bottom: 1.5rem;
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 1.5rem;
+  color: var(--dark-3);
 }
 
-.marker\:text-lg *::marker {
-  font-size: 1.125rem;
-  line-height: 1.75rem;
+.support-card-description {
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5rem;
+  color: var(--grey-2);
 }
 
 .marker\:text-2xl *::marker {
@@ -2812,38 +2863,13 @@ a {
   line-height: 2rem;
 }
 
-.marker\:text-orange-500 *::marker {
-  color: rgb(249 115 22 );
-}
-
 .marker\:text-\[\#FF826E\] *::marker {
   color: rgb(255 130 110 );
-}
-
-.marker\:w-2::marker {
-  width: 0.5rem;
-}
-
-.marker\:w-4::marker {
-  width: 1rem;
-}
-
-.marker\:w-6::marker {
-  width: 1.5rem;
-}
-
-.marker\:text-lg::marker {
-  font-size: 1.125rem;
-  line-height: 1.75rem;
 }
 
 .marker\:text-2xl::marker {
   font-size: 1.5rem;
   line-height: 2rem;
-}
-
-.marker\:text-orange-500::marker {
-  color: rgb(249 115 22 );
 }
 
 .marker\:text-\[\#FF826E\]::marker {
